@@ -75,6 +75,10 @@ public class HastebinBot {
         try {
             Response response = client.newCall(request).execute();
 
+            if(response.body() == null) {
+                return null;
+            }
+
             JsonObject jsonObject = new Gson().fromJson(response.body().string(), JsonObject.class);
 
             return "https://hastebin.com/" + jsonObject.get("key").getAsString() + "\n";
