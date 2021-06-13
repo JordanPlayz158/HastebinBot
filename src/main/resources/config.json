@@ -1,7 +1,10 @@
 {
   "token": "",
   "activity": {
-    "name": "",
-    "type": ""
-  }
+    "name": "Ping me to get a hastebin of your message or a replied message!",
+    "type": "LISTENING"
+  },
+
+  "_autoComment": "When auto is true it will automatically make a hastebin of any attachments and put them in chat",
+  "auto": true
 }
